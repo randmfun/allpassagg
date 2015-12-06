@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" ng-app="allpassApp">
+
+<head>
+    <title>All Pass - Search</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/coursedetails.css" />
+
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/coursecontroller.js"></script>
+    <script src="js/services/coursedata.js"></script>
+    <script src="js/filters.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Course Aggregator</h2>
+        <br/>
+
+
+        <div ng-controller='CoursesController' style="position:relative;">
+            <h3> Courses </h3>
+
+            Search:
+            <input type="text" placeholder="What do you want to learn?" style="width: 350px; height:auto;" ng-model="query.Title" />
+
+            Order By:
+            <select ng-model="sortorder">
+                <option selected value="Title">Title</option>
+                <option value="Rating">Rating</option>
+            </select>
+
+            Level:
+            <select ng-model="findlevel.Level">
+                <option selected value="">All</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Intermediate">Intermediate</option>
+            </select>
+
+            <br />
+            <br />
+
+
+            <div>
+                <div ng-repeat="Course in courses | orderBy:sortorder | filter:findlevel | filter: query" class="cssOneCourseHeader">
+                    <div class="cssOneCourseName">{{Course.Title | uppercase}}</div>
+                    <div class="cssOneCourseRating">Rating: {{Course.Rating | number:2}}</div>
+
+                    <div class="cssOneCourseDuration">Duration : {{Course.Duration | duration}}</div>
+                    <div class="cssOneCoursePrice">Cost : {{Course.Cost | currency}}</div>
+                    <div class="cssOneCourseProvider">Provider : <a href="{{Course.ProviderUrl}}">{{Course.Provider}}</a></div> 
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

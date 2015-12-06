@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" ng-app="allpassApp">
+
+<head>
+    <title>indes page</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/coursecontroller.js"></script>
+    <script src="js/services/coursedata.js"></script>
+    <script src="js/filters.js"></script>
+    
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <h2>ALL PASS: Course Aggregator</h2> <br />
+        
+        <div ng-controller='CoursesController'>
+
+            <h3> Courses </h3>
+
+            Search: <input type="text" placeholder="What do you want to learn?" style="width: 350px; height:auto;" ng-model="query.Title"/>
+            
+            Order By:
+            <select ng-model="sortorder">
+                <option selected value="Title">Title</option>
+                <option value="Rating">Rating</option>
+            </select>
+
+            Level:
+            <select ng-model="findlevel.Level">
+                <option selected value="">All</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Intermediate">Intermediate</option>
+            </select>
+
+            <br /><br />
+
+            <ul class="thumbnails list-unstyled" >
+                <li ng-repeat="Course in courses | orderBy:sortorder | filter:findlevel | filter:query">
+                    <div class="row course">
+                        <div class="well span9" >
+                            <h4 class="well-title">{{Course.Title | uppercase}}</h4>
+                            <h6 style="margin-top:-10px">{{Course.Describtion}}</h6>
+
+                            <div style="float:left; position:relative;">Level: {{Course.Level}}</div>
+                            <div style="float:left; left: 100px; position:relative;">Cost : {{Course.Cost | currency}}</div> <br/>
+
+                            
+                            <span style="float:left; left: 200px; position:relative;">Duration: {{Course.Duration | duration}}</span> <br />
+
+                            <div style="float:left; left: 200px; position:relative;">Provider : <a href="{{Course.ProviderUrl}}">{{Course.Provider}}</a></div> <br/>
+                            
+                            <div style="float:left; position:relative;">{{Course.Rating | number:2}}</div>                            
+                            <span style="float:left; left: 10px; position:relative;" ng-style="{'display': 'block', 'width': '65px', 'height': '13px', 'background': 'url(resource/star-rating-sprite.png) 0 0',}">
+                                <span ng-style="{'display': 'block', 'width': ratingpercentage(Course.Rating), 'height': '13px', 'background': 'url(resource/star-rating-sprite.png) 0 -13px',}"></span>
+                            </span>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
