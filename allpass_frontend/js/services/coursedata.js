@@ -84,6 +84,17 @@ allPassApp.factory('courseDataService', function ($http, $log) {
             return mockAllCourses[id - 1];
         },
 
+        getCourses: function (searchtext) {
+            var result = [];
+            for (var i = 0; i < mockAllCourses.length; i++) {
+                if (mockAllCourses[i].Title.indexOf(searchtext) > -1) {
+                    $log.warn(mockAllCourses[i].Title);
+                    result.push(mockAllCourses[i]);
+                }
+            }
+            return result;
+        },
+
     };
 }
 );

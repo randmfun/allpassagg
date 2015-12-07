@@ -1,8 +1,8 @@
 ﻿<div>
     <h3> Courses </h3>
 
-    Search: <input type="text" placeholder="What do you want to learn?" style="width: 350px; height:auto;" ng-model="query.Title" />
-
+    Search: <input type="text" ng-model="searchtext" ng-model-options="{ debounce: 200 }" ng-change="doSearch()" placeholder="What do you want to learn?" style="width: 350px; height:auto;"/> 
+    
     Order By:
     <select ng-model="sortorder">
         <option selected value="Title">Title</option>
