@@ -68,7 +68,8 @@
   <ItemGroup>
     <Content Include="css\app.css" />
     <Content Include="css\coursedetails.css" />
-    <Content Include="js\controllers\searchcontroller.js" />
+    <Content Include="js\controllers\coursedetailcontroller.js" />
+    <Content Include="js\controllers\courselistcontroller.js" />
     <Content Include="js\filters.js" />
     <Content Include="js\services\coursedata.js" />
     <Content Include="lib\angular-resource.js" />
@@ -78,6 +79,7 @@
     <Content Include="lib\angular-sanitize.js" />
     <Content Include="lib\angular-sanitize.min.js" />
     <Content Include="lib\angular.js" />
+    <Content Include="lib\underscore-1.4.4.min.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -90,14 +92,15 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="index_back.html" />
     <Content Include="js\app.js" />
-    <Content Include="js\controllers\coursecontroller.js" />
     <Content Include="lib\angular.min.js" />
     <Content Include="lib\bootstrap.min.js" />
     <Content Include="lib\jquery-1.10.2.min.js" />
     <Content Include="resource\star-rating-sprite.png" />
     <Content Include="index.html" />
-    <Content Include="templates\account.html" />
-    <Content Include="templates\search.html" />
+    <Content Include="templates\about.html" />
+    <Content Include="templates\coursedetails.html" />
+    <Content Include="templates\editprofile.html" />
+    <Content Include="templates\courselist.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

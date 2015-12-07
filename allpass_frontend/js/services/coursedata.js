@@ -60,14 +60,14 @@ var mockAllCourses = [
 ];
 
 allPassApp.factory('courseDataService', function ($http, $log) {
-
+    
     return {
-
+        
         //getAllCourses: function (successCb) {
-        //    $http.get('http://localhost:50314/api/course/1').
+        //    $http.get('http://localhost:50314/api/course/').
         //        success(function (data, status, headers, config) {
         //            $log.warn('sucess');
-        //            successCb(data);
+        //            $log.warn(data, status, headers(), config);
         //        }).
         //        error(function (data, status, headers, config) {
         //            $log.warn('Error')
@@ -96,5 +96,5 @@ allPassApp.factory('courseDataService', function ($http, $log) {
         },
 
     };
-}
+  }
 );

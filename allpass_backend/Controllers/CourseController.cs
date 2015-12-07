@@ -8,17 +8,12 @@ using System.Web.Http;
 
 using allpassaggr.DataModel;
 using allpassaggr.Providers;
+using System.Web.Http.Cors;
 
 namespace allpassaggr.Controllers
 {
-     public class CourseController : ApiController
+    public class CourseController : ApiController
     {
-        //public JToken Get(string id = null)
-        //{
-        //    var path = System.Web.Hosting.HostingEnvironment.MapPath("/");
-        //    return JObject.Parse("");
-        //}
-
         // GET: api/Course
         public IEnumerable<CourseModel> Get()
         {
