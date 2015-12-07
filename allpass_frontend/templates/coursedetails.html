@@ -1,0 +1,20 @@
+﻿
+<h3>Details on course: {{course.Title | uppercase}}</h3>
+<div class="well span9">
+    <h4 class="well-title">{{course.Title | uppercase}}</h4>
+    <h6 style="margin-top:-10px">{{course.Describtion}}</h6>
+
+    <div style="float:left; position:relative;">Level: {{course.Level}}</div>
+    <div style="float:left; left: 100px; position:relative;">Cost : {{course.Cost | currency}}</div> <br />
+
+
+    <span style="float:left; left: 200px; position:relative;">Duration: {{course.Duration | duration}}</span> <br />
+
+    <div style="float:left; left: 200px; position:relative;">Provider : <a href="{{course.ProviderUrl}}">{{course.Provider}}</a></div> <br />
+
+    <div style="float:left; position:relative;">{{course.Rating | number:2}}</div>
+    <span style="float:left; left: 10px; position:relative;" ng-style="{'display': 'block', 'width': '65px', 'height': '13px', 'background': 'url(resource/star-rating-sprite.png) 0 0',}">
+        <span ng-style="{'display': 'block', 'width': ratingpercentage(Course.Rating), 'height': '13px', 'background': 'url(resource/star-rating-sprite.png) 0 -13px',}"></span>
+    </span>
+
+</div>
