@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 allPassApp.controller('CourseDetailController',
-    function CourseDetailController($scope, $routeParams, courseDataService, $log) {
-        $scope.course = courseDataService.getCourseDetails($routeParams.CourseID);
+    function CourseDetailController($scope, courseDataService, $log, $stateParams) {
+        $scope.course = courseDataService.getCourseDetails($stateParams.CourseID);
     }
 );

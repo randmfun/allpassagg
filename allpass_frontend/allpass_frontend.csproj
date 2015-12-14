@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\app.css" />
+    <Content Include="css\bootstrap-slate.css" />
     <Content Include="css\coursedetails.css" />
     <Content Include="js\controllers\coursedetailcontroller.js" />
     <Content Include="js\controllers\courselistcontroller.js" />
@@ -78,6 +79,7 @@
     <Content Include="lib\angular-route.min.js" />
     <Content Include="lib\angular-sanitize.js" />
     <Content Include="lib\angular-sanitize.min.js" />
+    <Content Include="lib\angular-ui-router.min.js" />
     <Content Include="lib\angular.js" />
     <Content Include="lib\underscore-1.4.4.min.js" />
     <Content Include="packages.config" />
@@ -101,6 +103,7 @@
     <Content Include="templates\coursedetails.html" />
     <Content Include="templates\editprofile.html" />
     <Content Include="templates\courselist.html" />
+    <Content Include="templates\register.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

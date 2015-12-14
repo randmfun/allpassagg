@@ -5,14 +5,16 @@
 <head>
     <title ng-bind="'All Pass -' + $root.title">All Pass - Welcome</title>
     <meta charset="utf-8" />
-
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-slate.css" />
     
     <script src="lib/jquery-1.10.2.min.js"></script>
     
     <script src="lib/angular.min.js"></script>
-    <script src="lib/angular-route.min.js"></script>
+    <!--<script src="lib/angular-route.min.js"></script>-->
+    <script src="lib/angular-ui-router.min.js"></script>
     <script src="lib/underscore-1.4.4.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
 
@@ -28,14 +30,19 @@
     <div class="container">
 
         <h2>ALL PASS: Course Aggregator</h2> <br />
-
-        <ul class="nav nav-tabs">
-            <li class="nav active" data-toggle="tab"><a href="#/courses">Courses</a></li>
-            <li class="nav" data-toggle="tab"><a href="#/about">About</a></li>
-        </ul>
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li ui-sref-active="active"  data-toggle="tab"><a ui-sref="courses">Courses</a></li>
+                <li ui-sref-active="active" data-toggle="tab"><a ui-sref="register">Register</a></li>
+                <li ui-sref-active="active" data-toggle="tab"><a ui-sref="about">About</a></li>
+            </ul>
+        </div>
         
-        <ng-view></ng-view>
+        <div ui-view></div>
         
+        <div class="footer">
+            <p><span class="glyphion glyphicon-heart">From all pass team</span></p>
+        </div>
     </div>
 
 </body>
