@@ -69,10 +69,12 @@
     <Content Include="css\app.css" />
     <Content Include="css\bootstrap-slate.css" />
     <Content Include="css\coursedetails.css" />
+    <Content Include="js\controllers\Calculator.js" />
     <Content Include="js\controllers\coursedetailcontroller.js" />
     <Content Include="js\controllers\courselistcontroller.js" />
     <Content Include="js\filters.js" />
     <Content Include="js\services\coursedata.js" />
+    <Content Include="karma.conf.js" />
     <Content Include="lib\angular-resource.js" />
     <Content Include="lib\angular-resource.min.js" />
     <Content Include="lib\angular-route.js" />
@@ -82,7 +84,7 @@
     <Content Include="lib\angular-ui-router.min.js" />
     <Content Include="lib\angular.js" />
     <Content Include="lib\underscore-1.4.4.min.js" />
-    <Content Include="packages.config" />
+    <Content Include="package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -104,6 +106,18 @@
     <Content Include="templates\editprofile.html" />
     <Content Include="templates\courselist.html" />
     <Content Include="templates\register.html" />
+    <Content Include="test\CourseControllerSpecRunner.html" />
+    <Content Include="test\lib\jasmine-2.4.0\boot.js" />
+    <Content Include="test\lib\jasmine-2.4.0\console.js" />
+    <Content Include="test\lib\jasmine-2.4.0\jasmine-html.js" />
+    <Content Include="test\lib\jasmine-2.4.0\jasmine.css" />
+    <Content Include="test\lib\jasmine-2.4.0\jasmine.js" />
+    <Content Include="test\lib\jasmine-2.4.0\jasmine_favicon.png" />
+    <Content Include="test\spec\CourseControllerSpec.js" />
+    <Content Include="test\spec\PlayerSpec.js" />
+    <Content Include="test\spec\SpecHelper.js" />
+    <Content Include="test\src\Player.js" />
+    <Content Include="test\src\Song.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -112,7 +126,6 @@
   <ItemGroup>
     <Folder Include="logs\" />
     <Folder Include="scripts\" />
-    <Folder Include="test\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
